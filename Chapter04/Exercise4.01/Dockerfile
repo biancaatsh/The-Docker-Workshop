@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1.22rc2-bookworm
 WORKDIR /myapp
 COPY welcome.go .
 RUN go build -o welcome .

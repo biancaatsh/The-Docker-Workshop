@@ -1,5 +1,5 @@
 # EXPOSE & HEALTHCHECK example
-FROM ubuntu
+FROM ubuntu:24.10
 RUN apt-get update && apt-get install apache2 curl -y 
 HEALTHCHECK CMD curl -f http://localhost/ || exit 1
 EXPOSE 80

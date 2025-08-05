@@ -1,5 +1,5 @@
 # WORKDIR, COPY and ADD example
-FROM ubuntu:latest 
+FROM ubuntu:24.10 
 RUN apt-get update && apt-get install apache2 -y 
 WORKDIR /var/www/html/
 COPY index.html .

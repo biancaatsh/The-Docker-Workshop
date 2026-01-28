@@ -3,7 +3,7 @@ WORKDIR /myapp
 COPY main.go .
 RUN go build -o main .
  
-FROM alpine:latest AS runtime
+FROM alpine:3.23.3 AS runtime
 WORKDIR /myapp
 COPY --from=builder /myapp/main .
 ENTRYPOINT ["./main"]
